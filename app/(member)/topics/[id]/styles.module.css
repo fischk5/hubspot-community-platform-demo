@@ -1,0 +1,21 @@
+.container {
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.backLink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.backLink:hover {
+    text-decoration: underline;
+} 
