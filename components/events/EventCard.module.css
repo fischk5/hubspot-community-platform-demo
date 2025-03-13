@@ -1,0 +1,130 @@
+.eventCard {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.eventCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+    flex: 0 0 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.eventImage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.eventContent {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.eventHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.eventTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.eventCost {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: rgba(0, 120, 212, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.eventMeta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+.eventDate, .eventLocation, .eventOrganizer {
+    display: flex;
+    align-items: center;
+}
+
+.eventDescription {
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    /* Limit to 3 lines with ellipsis */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.eventFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.eventTags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.eventActions {
+    display: flex;
+    gap: 8px;
+}
+
+.actionButton, .detailsButton {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+}
+
+.actionButton {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.registeredButton {
+    background-color: var(--color-success);
+}
+
+.detailsButton {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+} 

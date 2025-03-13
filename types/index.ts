@@ -37,3 +37,17 @@ export interface DiscussionTopicType {
     author: string;
     posted_at: string;
 }
+
+export interface EventType {
+    _id: number;
+    name: string;
+    date: string;
+    isRegistered: boolean;
+    description: string;
+    featureImage: string;
+    tags: string[];
+    cost: number;
+    location?: string;
+    organizer?: string;
+    maxAttendees?: number;
+}
