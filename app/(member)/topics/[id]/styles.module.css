@@ -1,9 +1,18 @@
 .container {
-    padding: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--application-header-height) - 40px);
 }
 
-.header {
-    margin-bottom: 20px;
+.topBar {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    background-color: white;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .backLink {
@@ -12,10 +21,24 @@
     gap: 8px;
     color: var(--color-primary);
     text-decoration: none;
-    margin-bottom: 16px;
     font-size: 14px;
+    margin-right: 16px;
 }
 
 .backLink:hover {
     text-decoration: underline;
+}
+
+.topicName {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.contentContainer {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    background-color: white;
 } 

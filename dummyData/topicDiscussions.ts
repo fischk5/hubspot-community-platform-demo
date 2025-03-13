@@ -1,6 +1,6 @@
 import { DiscussionTopicType } from "@/types";
 
-const topicDiscussions: DiscussionTopicType[] = [
+export const topicDiscussions: DiscussionTopicType[] = [
     {
         _id: 987654321,
         subtopic_id: 65789456,

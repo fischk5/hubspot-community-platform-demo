@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { topicCategories } from '@/dummyData/topicCategories';
 import { subtopicCategories } from '@/dummyData/subtopicCategories';
+import { topicDiscussions } from '@/dummyData/topicDiscussions';
+import { DiscussionTopicType } from '@/types';
 
 export async function GET(
   request: NextRequest,
@@ -25,10 +27,22 @@ export async function GET(
       subCategory => subCategory.forum_id === topic._id
     );
 
-    // Return the topic with its subtopics
+    // Get discussions for each subtopic
+    const subtopicsWithDiscussions = matchingSubtopics.map(subtopic => {
+      const discussions = topicDiscussions.filter(
+        (discussion: DiscussionTopicType) => discussion.subtopic_id === subtopic._id
+      );
+      
+      return {
+        ...subtopic,
+        topics: discussions
+      };
+    });
+
+    // Return the topic with its subtopics and discussions
     return NextResponse.json({
       ...topic,
-      subtopics: matchingSubtopics
+      subtopics: subtopicsWithDiscussions
     });
   } catch (error) {
     console.error('Error fetching topic', error);

@@ -4,6 +4,12 @@
   --application-header-height: 60px;
   --darker-background-color: #f5f8fa;
   --hubspot-brand-color: #ff7a59;
+  --color-primary: #0091ae;
+  --color-text-primary: #33475b;
+  --color-text-secondary: #516f90;
+  --color-text-tertiary: #8ca5be;
+  --color-border: #e5ebf0;
+  --color-border-light: #f0f4f7;
 }
 
 html,
