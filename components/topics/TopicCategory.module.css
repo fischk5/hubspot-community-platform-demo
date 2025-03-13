@@ -1,0 +1,77 @@
+.topicContainer {
+    box-shadow: rgba(66, 91, 118, 0.12) 0px 1px 5px 0px;
+    width: 100%;
+    padding: 24px;
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 600px;
+}
+
+.topicCount,
+.topicMetadata {
+    flex-basis: 20%;
+}
+
+.topicTitlesContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.topicTitlesContainer svg {
+    font-size: 18px;
+}
+
+.topicTitles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+}
+
+.topicTitles h5 {
+    color: rgb(51, 71, 91);
+    color: rgb(0, 145, 174);
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.topicTitles h5:hover {
+    text-decoration: underline;
+}
+
+.topicTitles p {
+    font-size: 14px;
+    color: #33475b;
+    line-height: 24px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.topicCount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+}
+
+.topicCount div:first-of-type {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.topicMetadata {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 300;
+}
