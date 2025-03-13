@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: calc(100vh - var(--application-header-height));
+    font-size: 14px;
+}
+
+.mainContent {
+    background-color: white;
+    border: 1px solid white;
+    border-top-left-radius: 20px;
+    color: var(--hubspot-background-color);
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.sidebarContainer {
+    width: 200px;
+    position: relative;
+    color: var(--primary-font-color);
+    font-weight: 300;
+}
+
+.sidebarFloatingInnerContainer {
+    position: fixed;
+    top: var(--application-header-height);
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    padding-top: 40px;
+}

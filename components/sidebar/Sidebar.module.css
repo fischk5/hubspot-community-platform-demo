@@ -1,0 +1,27 @@
+.sidebarOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navigationOption {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 8px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 8px;
+    cursor: pointer;
+    color: unset;
+    text-decoration: none;
+}
+
+.navigationOption svg {
+    font-size: 20px;
+}
+
+.navigationOption:hover,
+.active {
+    background-color: #516f90;
+}

@@ -1,0 +1,35 @@
+.container {
+    color: var(--primary-font-color);
+    height: var(--application-header-height);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+    padding: 12px 20px;
+    font-size: 14px;
+}
+
+.container img {
+    height: 32px;
+    width: 32px;
+    border-radius: 6px;
+}
+
+.primaryHeadings {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.primaryHeading {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.toggler {
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
