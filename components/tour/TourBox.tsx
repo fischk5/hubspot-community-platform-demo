@@ -80,6 +80,15 @@ export default function TourBox() {
     goToPreviousStep();
   };
   
+  // Handle contact click for the final step
+  const handleContactClick = () => {
+    // End the tour
+    endTour();
+    
+    // Open mailto link
+    window.location.href = "mailto:kevin@tetheros.com?subject=Loved%20the%20demo%20-%20let's%20talk";
+  };
+  
   // Render the tour box
   return (
     <>
@@ -133,9 +142,9 @@ export default function TourBox() {
             ) : (
               <button 
                 className={`${styles.tourButton} ${styles.primaryButton}`}
-                onClick={endTour}
+                onClick={handleContactClick}
               >
-                Finish Tour
+                Contact Kevin
               </button>
             )}
           </div>

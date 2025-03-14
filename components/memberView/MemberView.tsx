@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import styles from './MemberView.module.css'
 import Link from 'next/link'
+import { useTour } from '@/components/tour'
 import { 
   FaUsers, 
   FaChartLine, 
@@ -17,30 +18,22 @@ import {
   FaCommentDots,
   FaCalendarDay
 } from 'react-icons/fa'
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function MemberView() {
+    const { startTour } = useTour();
+    
+    const handleStartTour = () => {
+        startTour();
+    };
+    
     return (
         <div className={styles.container}>
             {/* Header section */}
             <div className={styles.header}>
                 <div className={styles.headerContent}>
-                    <h1>Community Hub</h1>
-                    <p>Welcome, Kevin!</p>
-                </div>
-            </div>
-
-            {/* Quick navigation */}
-            <div className={styles.quickNavContainer}>
-                <div className={styles.quickNav}>
-                    <Link href="/topics" className={styles.navButton}>
-                        <FaCommentDots /> Topics
-                    </Link>
-                    <Link href="/events" className={styles.navButton}>
-                        <FaCalendarDay /> Events
-                    </Link>
-                    <Link href="/member-settings" className={styles.navButton}>
-                        <FaCog /> Settings
-                    </Link>
+                    <h1>HubSpot Community Hub Demonstration</h1>
+                    <p>Welcome!</p>
                 </div>
             </div>
 
@@ -54,9 +47,9 @@ export default function MemberView() {
                             Enhance your product suite with a powerful community management tool that aligns perfectly with 
                             HubSpot's inbound philosophy and helps businesses grow better through meaningful customer engagement.
                         </p>
-                        <Link href="/topics" className={styles.exploreLink}>
+                        <button onClick={handleStartTour} className={styles.exploreLink}>
                             Explore the demo <FaArrowRight />
-                        </Link>
+                        </button>
                     </div>
                     <div className={styles.welcomeImage}>
                         <div className={styles.imagePlaceholder}>
@@ -210,17 +203,21 @@ export default function MemberView() {
                 <div className={styles.socialSection}>
                     <h3>Connect with Kevin Fischer</h3>
                     <div className={styles.socialLinks}>
-                        <a href="https://kevinafischer.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                        <a href="https://www.youtube.com/@kevinalanfischer" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                             <FaYoutube size={24} />
-                            <span>YouTube</span>
+                            <span>@kevinalanfischer</span>
                         </a>
-                        <a href="https://kevinafischer.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                        <a href="https://github.com/fischk5" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                             <FaGithub size={24} />
-                            <span>GitHub</span>
+                            <span>@fischk5</span>
                         </a>
-                        <a href="https://kevinafischer.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                        <a href="https://www.linkedin.com/in/kevinalanfischer/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                             <FaLinkedin size={24} />
-                            <span>LinkedIn</span>
+                            <span>@kevinalanfischer</span>
+                        </a>
+                        <a href="https://x.com/iamkevinfischer" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                            <FaXTwitter size={24} />
+                            <span>@iamkevinfischer</span>
                         </a>
                     </div>
                 </div>

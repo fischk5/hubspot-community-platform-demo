@@ -115,6 +115,11 @@
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .exploreLink:hover {
