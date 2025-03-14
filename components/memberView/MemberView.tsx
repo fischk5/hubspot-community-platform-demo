@@ -71,22 +71,21 @@ export default function MemberView() {
                     <div className={styles.opportunityContent}>
                         <p className={styles.opportunityText}>
                             The online community management software market represents a substantial opportunity for HubSpot, 
-                            currently valued at <strong>$5.52 billion in 2024</strong> and projected to reach <strong>$11.72 billion by 2030</strong>, 
-                            growing at an impressive CAGR of 12.40%. North America, HubSpot's primary market, commands the largest 
-                            share at $2.2 billion in 2024.
+                            currently valued at over <strong>$6.7 billion in 2024</strong> and projected to reach <strong>$19 billion by 2030</strong> (<a href="https://www.verifiedmarketresearch.com/product/online-community-management-software-market/">verifiedmarketresearch.com</a>), 
+                            growing at an impressive CAGR of over 14%.
                         </p>
                         <div className={styles.opportunityMetrics}>
                             <div className={styles.metric}>
-                                <span className={styles.metricValue}>$11.72B</span>
+                                <span className={styles.metricValue}>$19B+</span>
                                 <span className={styles.metricLabel}>projected market size by 2030</span>
                             </div>
                             <div className={styles.metric}>
-                                <span className={styles.metricValue}>12.4%</span>
+                                <span className={styles.metricValue}>14%+</span>
                                 <span className={styles.metricLabel}>CAGR through 2031</span>
                             </div>
                             <div className={styles.metric}>
-                                <span className={styles.metricValue}>$2.2B</span>
-                                <span className={styles.metricLabel}>North American market size in 2024</span>
+                                <span className={styles.metricValue}>$6.7B</span>
+                                <span className={styles.metricLabel}>Estimated market size in 2024</span>
                             </div>
                         </div>
                     </div>
@@ -101,7 +100,7 @@ export default function MemberView() {
                         </div>
                         <h4>Strategic Alignment</h4>
                         <p>
-                            With 247,939 paying customers across 135+ countries and $2.63 billion in revenue (2024), 
+                            With almost 250,000 paying customers across 135+ countries and $2.63 billion in revenue (2024), 
                             HubSpot has the customer base and financial strength to successfully launch and monetize 
                             a community platform.
                         </p>
