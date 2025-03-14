@@ -1,0 +1,208 @@
+.tourTriggerContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.tourTrigger {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: var(--hubspot-brand-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tourTrigger:hover {
+  transform: scale(1.05);
+}
+
+.tourActive {
+  background-color: var(--color-text-primary);
+}
+
+.tourActive:hover {
+  background-color: var(--color-text-secondary);
+}
+
+.tourTrigger svg {
+  font-size: 24px;
+}
+
+.tourMenu {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 180px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.tourMenuTitle {
+  color: var(--color-text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.tourMenuOption {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.tourMenuOption:hover {
+  background-color: var(--color-border-light);
+  color: var(--hubspot-brand-color);
+}
+
+.tourBox {
+  position: fixed;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  z-index: 1500;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.topLeft {
+  top: 20px;
+  left: 20px;
+}
+
+.topRight {
+  top: 20px;
+  right: 20px;
+}
+
+.bottomLeft {
+  bottom: 20px;
+  left: 20px;
+}
+
+.bottomRight {
+  bottom: 20px;
+  right: 20px;
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tourTitle {
+  color: var(--color-text-primary);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.tourDescription {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.tourDescription p {
+  margin-bottom: 8px;
+}
+
+.tourDescription p:last-child {
+  margin-bottom: 0;
+}
+
+.tourControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.tourButton {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.primaryButton {
+  background-color: var(--hubspot-brand-color);
+  color: white;
+}
+
+.primaryButton:hover {
+  background-color: #f15b2a;
+}
+
+.secondaryButton {
+  background-color: #f5f8fa;
+  color: var(--color-text-secondary);
+}
+
+.secondaryButton:hover {
+  background-color: #e5ebf0;
+}
+
+.highlight {
+  position: absolute;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.progressDot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-border);
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.progressDot.active {
+  background-color: var(--hubspot-brand-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

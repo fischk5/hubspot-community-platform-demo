@@ -5,7 +5,9 @@ import styles from './Sidebar.module.css'
 import { CiHome, CiMicrophoneOn, CiChat1, CiSettings } from "react-icons/ci";
 import { usePathname } from 'next/navigation';
 import { LiaBullhornSolid, LiaIdBadge } from "react-icons/lia";
+import { FaLightbulb } from "react-icons/fa";
 import Link from 'next/link';
+import { useTour } from '@/components/tour';
 
 function getNavigationItem(navKey: string): React.ReactNode {
     if (navKey === "home") return <CiHome/>
@@ -20,6 +22,7 @@ function getNavigationItem(navKey: string): React.ReactNode {
 export default function Sidebar({ navigationLinks }: SidebarProps ) {
     const pathname = usePathname();
     const firstSegment = pathname.split("/")[1];
+    const { startTour } = useTour();
     
     return (
         <div className={styles.sidebarOptions}>
@@ -33,6 +36,14 @@ export default function Sidebar({ navigationLinks }: SidebarProps ) {
                 )
             }
             )}
+            
+            <div 
+                className={`${styles.navigationOption} ${styles.tourButton}`}
+                onClick={startTour}
+            >
+                <FaLightbulb />
+                Take a Tour
+            </div>
         </div>
     )
 }

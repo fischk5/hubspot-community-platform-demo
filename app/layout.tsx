@@ -4,6 +4,7 @@ import Header from "@/components/header/Header";
 import "./globals.css";
 import { Lexend_Deca } from 'next/font/google'
 import BaseViewLayout from "@/components/layouts/BaseViewLayout";
+import { Tour } from "@/components/tour";
 
 const lexendDeca = Lexend_Deca({
   subsets: ["latin"],
@@ -26,12 +27,14 @@ export default function RootLayout({
     <html lang="en" className={lexendDeca.className}>
       <body>
         <ModeProvider>
-          <div className="baseLayoutStackedView">
-            <Header/>
-            <BaseViewLayout>
-              {children}
-            </BaseViewLayout>
-          </div>
+          <Tour>
+            <div className="baseLayoutStackedView">
+              <Header/>
+              <BaseViewLayout>
+                {children}
+              </BaseViewLayout>
+            </div>
+          </Tour>
         </ModeProvider>
       </body>
     </html>

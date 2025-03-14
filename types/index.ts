@@ -51,3 +51,31 @@ export interface EventType {
     organizer?: string;
     maxAttendees?: number;
 }
+
+// Tour Guide Types
+export type TourPosition = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
+
+export interface TourStep {
+    id: string;
+    title: string;
+    description: string | string[];
+    path: string;
+    position: TourPosition;
+    highlightSelector?: string;
+}
+
+export interface TourConfig {
+    steps: TourStep[];
+}
+
+export interface TourContextType {
+    isActive: boolean;
+    currentStepIndex: number;
+    isCompleted: boolean;
+    startTour: () => void;
+    endTour: () => void;
+    goToNextStep: () => void;
+    goToPreviousStep: () => void;
+    resumeTour: () => void;
+    currentStep: TourStep | null;
+}

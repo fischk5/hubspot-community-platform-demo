@@ -25,3 +25,13 @@
 .active {
     background-color: #516f90;
 }
+
+.tourButton {
+    margin-top: 20px;
+    border: 1px dashed var(--hubspot-brand-color);
+    color: var(--hubspot-brand-color);
+}
+
+.tourButton:hover {
+    background-color: rgba(255, 122, 89, 0.1);
+}
