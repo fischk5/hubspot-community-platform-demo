@@ -3,6 +3,8 @@
   flex-direction: column;
   background-color: #f5f8fa;
   min-height: calc(100vh - var(--application-header-height));
+  height: calc(100vh - var(--application-header-height));
+  overflow: hidden; /* Prevent scrolling on the container */
 }
 
 /* Header styles */
@@ -13,6 +15,9 @@
   padding: 24px 32px;
   background-color: white;
   border-bottom: 1px solid #e0e6ed;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .headerContent h1 {
@@ -33,6 +38,9 @@
   background-color: white;
   border-bottom: 1px solid #e0e6ed;
   padding: 16px 32px;
+  position: sticky;
+  top: 76px; /* Height of the header plus padding */
+  z-index: 9;
 }
 
 .quickNav {
@@ -66,6 +74,8 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  overflow-y: auto; /* Enable scrolling for the content */
+  height: 100%;
 }
 
 /* Welcome card styles */

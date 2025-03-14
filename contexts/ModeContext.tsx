@@ -6,20 +6,15 @@ type Mode = "Member" | "Admin";
 
 interface ModeContextType {
     mode: Mode;
-    toggleMode: () => void;
 }
 
 const ModeContext = createContext<ModeContextType | undefined>(undefined);
 
 export function ModeProvider({ children }: { children: ReactNode }) {
-    const [mode, setMode] = useState<Mode>("Member")
-
-    const toggleMode = () => {
-        setMode((prev) => (prev === "Member" ? "Admin" : "Member"))
-    }
+    const [mode] = useState<Mode>("Member")
 
     return (
-        <ModeContext.Provider value={{mode, toggleMode }}>
+        <ModeContext.Provider value={{ mode }}>
             { children }
         </ModeContext.Provider>
     )
