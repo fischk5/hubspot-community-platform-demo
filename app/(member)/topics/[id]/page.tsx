@@ -1,32 +1,24 @@
 "use client"
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useParams } from 'next/navigation'
 import Link from 'next/link'
-import { TopicCategoryType, SubtopicCategoryType } from '@/types'
+import { TopicCategoryType } from '@/types'
 import styles from './styles.module.css'
 import { FaArrowLeft } from 'react-icons/fa6'
 import useSWR from 'swr'
 import DiscussionList from '@/components/topics/discussion/DiscussionList'
 import DiscussionDetail from '@/components/topics/discussion/DiscussionDetail'
 
-interface TopicDetailPageProps {
-  params: {
-    id: string
-  }
-}
-
-const fetcher = (url: string) => fetch(url).then((res) => {
-  if (!res.ok) throw new Error('Failed to fetch topic')
-  return res.json()
-})
-
-export default function TopicDetailPage({ params }: TopicDetailPageProps) {
+export default function TopicDetailPage() {
   const router = useRouter()
+  const params = useParams()
+  const topicId = params.id as string
+  
   const [activeSubtopicId, setActiveSubtopicId] = useState<number | null>(null)
   
   const { data: topic, error } = useSWR<TopicCategoryType>(
-    `/api/topics/${params.id}`,
+    topicId ? `/api/topics/${topicId}` : null,
     fetcher,
     {
       onError: () => {
@@ -78,4 +70,9 @@ export default function TopicDetailPage({ params }: TopicDetailPageProps) {
       </div>
     </div>
   )
-} 
+}
+
+const fetcher = (url: string) => fetch(url).then((res) => {
+  if (!res.ok) throw new Error('Failed to fetch topic')
+  return res.json()
+}) 
